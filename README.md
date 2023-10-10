@@ -1,4 +1,3 @@
-# PriyankaFirstAnguarApp
 # What is Angular
 Angular is a Javascript Framework which allows you to create reactive Single-PageA-applicatios (SPAs)
 # Angular versioning
