@@ -37,20 +37,22 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
 - using services and depedency injection we achieve different pieces/componenets in the    angular app communicate to each other, keeping code centralized and manage the state of the application
 - routing helps us achieve manage different urls (from diff components), gives a feel of  switchng between pagaes, although technically we remain on a single page (index.html)
 - angular gets started with main.ts, there we bootstrap an angular application (AppModule), by passing the module as an argument and in this module we bootstrap AppComponent, angular analyses appComponet and learns about <app-root> selector and its able to use this selector in index.html
+- data flows from parent component to child component using @Input decorator and custom      directives
+- data flows to parent component from child component using @Output decorator by raising an event to notify. To raise an event, an @Output() must have a type of EventEmitter, which is a class in @angular/core that you use to emit events
 - event binding 
    - <btn (click)="onClick()">
 - property binding
- - <btn [disabled]="!allowResetuser">
+   - <btn [disabled]="!allowResetuser">
 - string interpolation
    - <p>{{ userName }}</p>
 - 2-way data binding
- - <input type="text" [(ngModel)] = "userName">
+   - <input type="text" [(ngModel)] = "userName">
 - directives
- - instructions in the DOM
- - components are directives with a template
- - with components we instruct angular to add content of our component, and business logic of our component in our component's selector
- - ngIf, ngFor are built-in structural directive, have to be used with star(*)
- - ngClass, ngStyle are built-in directives, need to be used with square brackets([])
+   - instructions in the DOM
+   - components are directives with a template
+   - with components we instruct angular to add content of our component, and business logic of our component in our component's selector
+   - ngIf, ngFor are built-in structural directives, have to be used with star(*)
+   - ngClass, ngStyle are built-in directives, need to be used with square brackets([])
 - observables , amgular uses this to handle asynchronous code
 - 'forms' to handle user inputs 
 - 'pipes' to transform the output to display on html
