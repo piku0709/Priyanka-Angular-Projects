@@ -4,12 +4,9 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   selector: 'app-even',
   templateUrl: './even.component.html',
   styleUrls: ['./even.component.css'],
-  encapsulation: ViewEncapsulation.Emulated //None, ShadowDom
+  encapsulation: ViewEncapsulation.ShadowDom //None, Emulated, ShadowDom
 })
 export class EvenComponent {
   @Input("gameNumber")
   gameNumber: number = 1
-  ngOnInit() {
-    console.log(`game number from EvenComponent: ${this.gameNumber}`)
-  }
 }

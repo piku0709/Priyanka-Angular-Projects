@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, Input, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-odd',
@@ -6,10 +6,7 @@ import { Component, Input, ViewEncapsulation, OnInit } from '@angular/core';
   styleUrls: ['./odd.component.css'],
   encapsulation: ViewEncapsulation.Emulated //None, ShadowDom
 })
-export class OddComponent implements OnInit {
+export class OddComponent{
   @Input("gameNumber")
   gameNumber: number = 2
-  ngOnInit() {
-    console.log(`game number from OddComponent: ${this.gameNumber}`)
-  }
 }

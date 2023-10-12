@@ -7,7 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class GameControlComponent implements OnInit {
 
-  id: number = 0
+  interval: number=0;
   @Output("incrementNumberEvent") incrementNumberPerSec = new EventEmitter<number>(); 
   gameNumber: number = 0
 
@@ -16,19 +16,16 @@ export class GameControlComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onStart() {
-    console.log(`start game`)
-    this.id = setInterval(() => {
+  onStartGame() {
+    this.interval = setInterval(() => {
       this.incrementNumber()
     }, 1000)
   }
-  onStop() {
-    console.log(`stop game`)
-    if(this.id) clearInterval(this.id)
+  onPauseGame() {
+    clearInterval(this.interval)
   }
 
   incrementNumber(){
-    console.log(`emit event of increasing number every 1 second`)
     this.incrementNumberPerSec.emit(this.gameNumber = this.gameNumber + 1)
   }
 

@@ -7,9 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'game-control';
-  gameNumber: number = 0
+  oddNumbers: number[] = []
+  evenNumbers: number[] = []
 
   onIncrementNumber(gameNumber: number) {
-    this.gameNumber = gameNumber
+    console.log(gameNumber)
+
+    if(gameNumber % 2 === 0)this.evenNumbers.push(gameNumber)
+    else this.oddNumbers.push(gameNumber)
+
   }
 }

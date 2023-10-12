@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h3>Game-Control component</h3>
+      <h3>Game-Control App</h3>
       <ol>
         <li>The GameControl Component has buttons to start and stop the game</li>
         <li>When starting the game, an event should get emitted each second</li>
@@ -9,9 +9,21 @@
         <li>A new Odd component should get created for every odd number emitted, should output Odd - NUMBER in red</li>
         <li>A new Even component should get created for every even number emitted, should output Even - NUMBER in red</li>
       </ol>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
       <app-game-control (incrementNumberEvent)="onIncrementNumber($event)"></app-game-control>
-      <app-even [gameNumber]="gameNumber"></app-even>
-      <app-odd [gameNumber]="gameNumber"></app-odd>
+    </div>
+  </div>
+  <div class="row">  
+    <div class="col-md-1">
+      <app-even *ngFor="let evenNumber of evenNumbers" [gameNumber]="evenNumber"></app-even>
+    </div>
+    <div class="col-md-1"> 
+      <app-odd *ngFor="let oddNumber of oddNumbers" [gameNumber]="oddNumber"></app-odd>
     </div>
   </div>
 </div>
