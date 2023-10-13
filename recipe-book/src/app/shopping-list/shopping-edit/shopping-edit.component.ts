@@ -8,17 +8,17 @@ import { Ingredient } from 'src/app/shared/ingredient.model';
 })
 export class ShoppingEditComponent {
   
-  @ViewChild("nameInput") nameInput: ElementRef
-  @ViewChild("amountInput") amountInput: ElementRef
+  @ViewChild("nameInput") nameInputRef: ElementRef
+  @ViewChild("amountInput") amountInputRef: ElementRef
 
   @Output()
-  ingredientAdd: EventEmitter<Ingredient> = new EventEmitter<Ingredient>();
+  ingredientAdded: EventEmitter<Ingredient> = new EventEmitter<Ingredient>();
 
-  onAdd(){
-    this.ingredientAdd.emit(
-      new Ingredient(
-        this.nameInput.nativeElement.value,
-        this.amountInput.nativeElement.value))
+  onAddItem(){
+    const inputValue = this.nameInputRef.nativeElement.value
+    const amountValue = this.amountInputRef.nativeElement.value
+    const ingredient = new Ingredient(inputValue, amountValue)
+    this.ingredientAdded.emit(ingredient)
   }
 
   onDelete(){
