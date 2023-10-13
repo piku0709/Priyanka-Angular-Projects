@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipe-book';
+
+  navigateToRecipes: boolean = false
+  openRecipes() {
+    this.navigateToRecipes = true
+    this.navigateToShoppingList = false
+  }
+
+  navigateToShoppingList: boolean = false
+  openShoppingList() {
+    this.navigateToShoppingList = true
+    this.navigateToRecipes = false
+  }
 }

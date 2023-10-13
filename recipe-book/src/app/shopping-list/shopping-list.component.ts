@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 
 @Component({
@@ -13,6 +13,8 @@ export class ShoppingListComponent {
     new Ingredient('Sugar', 1),
     new Ingredient('Cashews', 1)
   ]
+
+  @Input("navigateToShoppingList") openShoppingListCmp: boolean
 
   constructor(){}
 
