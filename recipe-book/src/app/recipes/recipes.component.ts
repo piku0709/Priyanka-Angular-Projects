@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent {
-  @Input("navigateToRecipes") openRecipesCmp: boolean
+  
 }

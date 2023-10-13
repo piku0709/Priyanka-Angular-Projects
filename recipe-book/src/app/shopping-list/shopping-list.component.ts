@@ -14,8 +14,6 @@ export class ShoppingListComponent {
     new Ingredient('Cashews', 1)
   ]
 
-  @Input("navigateToShoppingList") openShoppingListCmp: boolean
-
   constructor(){}
 
   ngOnInit(){}

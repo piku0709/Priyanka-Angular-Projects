@@ -5,14 +5,10 @@ import { Component, EventEmitter, Output } from '@angular/core'
     templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-    @Output("openRecipes") openRecipes = new EventEmitter<null>()
-    @Output("openShoppingList") openShoppingList = new EventEmitter<null>()
+    @Output()
+    featureSelected =  new EventEmitter<string>();
 
-    recipesClick(){
-        this.openRecipes.emit()
-    }
-
-    shoppingListClick(){
-        this.openShoppingList.emit()
+    onSelect(feature: string) {
+        this.featureSelected.emit(feature)
     }
 }
