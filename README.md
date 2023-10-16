@@ -48,6 +48,9 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
 - 2-way data binding
    - <input type="text" [(ngModel)] = "userName">
 - directives
+   - attribute directives and structural directives
+   - attribute sirectives sit on elements just like attributes, only properties of element is changed, used with data binding and event binding
+   - structural directives also sit like an attribute, with a leading star symbol(*) on an element but they also change the structure of the DOM around that element (add/remove elements from DOM)
    - instructions in the DOM
    - components are directives with a template
    - with components we instruct angular to add content of our component, and business logic of our component in our component's selector
