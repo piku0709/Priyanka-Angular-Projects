@@ -51,12 +51,19 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - attribute directives and structural directives
    - attribute sirectives sit on elements just like attributes, only properties of element is changed, used with data binding and event binding
    - structural directives also sit like an attribute, with a leading star symbol(*) on an element but they also change the structure of the DOM around that element (add/remove elements from DOM)
+   - structural directives are converted into <ng-template> by angular (thats what the * denotes )
+   - more than one structural directives cannot be used on a single element
    - instructions in the DOM
    - components are directives with a template
    - with components we instruct angular to add content of our component, and business logic of our component in our component's selector
    - ngIf, ngFor are built-in structural directives, have to be used with star(*)
-   - ngClass, ngStyle are built-in directives, need to be used with square brackets([])
-- observables , amgular uses this to handle asynchronous code
+   - ngClass, ngStyle are built-in attribute directives, need to be used with square brackets []. square brackets mean that we are binding to some porperty on our directive
+   - create your own atribute directive steps
+      - ng generate directive ${directiveName} (ng g d better-highlight)
+      - add the file under declarations in AppModule
+   - HostListener and HostBinding decorators can be used inside a directive for working with any DOM element. With HostListener, we can bind to any property of an element inside of a driective
+   - with custom directives we can also create custom properties and use Input decorator or bind them. These custom properties can be used on a DOM element using the custom directive
+- observables, angular uses this to handle asynchronous code
 - 'forms' to handle user inputs 
 - 'pipes' to transform the output to display on html
 -  http, to reach out to web server, or save data into database
