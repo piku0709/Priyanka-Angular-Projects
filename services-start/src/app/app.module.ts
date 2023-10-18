@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
+import { AccountService } from './services/account.service';
+import { LoggingService } from './services/logging.service';
 
 @NgModule({
   declarations: [

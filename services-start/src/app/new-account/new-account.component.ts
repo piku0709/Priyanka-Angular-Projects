@@ -1,16 +1,14 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { Account } from '../models/account.model';
-import { LoggingService } from '../services/logging.service';
 import { AccountService } from '../services/account.service';
 
 @Component({
   selector: 'app-new-account',
   templateUrl: './new-account.component.html',
-  styleUrls: ['./new-account.component.css'],
-  providers: [LoggingService]
+  styleUrls: ['./new-account.component.css']
 })
 export class NewAccountComponent {
-  constructor(private loggingService: LoggingService, private accountService: AccountService){}
+  constructor(private accountService: AccountService){}
 
   onCreateAccount(accountName: string, accountStatus: string) {
     const account = new Account(accountName, accountStatus)
