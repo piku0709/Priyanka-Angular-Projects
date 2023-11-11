@@ -23,6 +23,10 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
 - install bootstrap locally
    - npm install --save bootstrap@3
    - edit angular.json config file to let angular know that you are using bttostrap.min.css file under node_modules
+- relative and absolute path
+   A relative path describes the location of a file relative to the current (working) directory*. An absolute path describes the location from the root directory. When learning to access data files through programming, we regularly use relative file paths
+   - absolute path starts with a slash (/), which always gets apended to the root folder
+   - relative path starts without a slash (/) or starts with a dot slash (./), which means add it to the currenlty loaded path or dot dot slash (../), which means go back one folder from the currently loaded path
 
 # What is typescript
 - Superset of javascript
@@ -38,7 +42,7 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
 - routing helps us achieve manage different urls (from diff components), gives a feel of switchng between pages, although technically we remain on a   single page (index.html)
 - angular gets started with main.ts, there we bootstrap an angular application (AppModule), by passing the module as an argument and in this module we bootstrap AppComponent, angular analyses appComponet and learns about <app-root> selector and its able to use this selector in index.html
 - data flows from parent component to child component using @Input decorator and custom directives
-- data flows to parent component from child component using @Output decorator by raising an event to notify. To raise an event, an @Output() must      have a type of EventEmitter, which is a class in @angular/core that you use to emit events
+- data flows to parent component from child component using @Output decorator by raising an event to notify. To raise an event, an @Output() must have a type of EventEmitter, which is a class in @angular/core that you use to emit events
 - event binding 
    - <btn (click)="onClick()">
 - property binding
@@ -57,13 +61,31 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - components are directives with a template
    - with components we instruct angular to add content of our component, and business logic of our component in our component's selector
    - ngIf, ngFor are built-in structural directives, have to be used with star(*)
-   - ngClass, ngStyle are built-in attribute directives, need to be used with square brackets []. square brackets mean that we are binding to some        porperty on our directive
+   - ngClass, ngStyle are built-in attribute directives, need to be used with square brackets []. square brackets mean that we are binding to some porperty on our directive
    - create your own atribute directive steps
       - ng generate directive ${directiveName} (ex with short form- ng g d better-highlight)
       - add the file under declarations in AppModule
-   - HostListener and HostBinding decorators can be used inside a directive for working with any DOM element. With HostListener, we can bind to any       property of an element inside of a driective
-   - with custom directives we can also create custom properties and use Input decorator or bind them. These custom properties can be used on a DOM       element using the custom directive
+   - HostListener and HostBinding decorators can be used inside a directive for working with any DOM element. With HostListener, we can bind to any property of an element inside of a driective
+   - with custom directives we can also create custom properties and use Input decorator or bind them. These custom properties can be used on a DOM element using the custom directive
+- Routing
+   - add Routes and RouterModule from @angular/router package
+   - add RouterModule into imports array of app.module.ts file
+   - use your applications routes array (type Routes) with RouterModule.forRoot() method
+   - angular has built-in directives routeLink to add your routes
+   - built-in directive routerLinkActive can be used with link(li) html tag to add active style to active route
+   - some of the router directives available are, routerLink, routerLinkActive,routerLinkActiveOptions, queryParams, fragment
+   - routerink, queryParams and fragements can also be used with square brackets, ex -[routerLink], [queryParams], they can be used to pass route parameters or query params for a route, fragements can be used to pass value after hash (#) in the route
+   - routerLink with square brackets accept an array value
+   - queryParams with square brackets accept javascript object {allowEdit: '1'}
 - observables, angular uses this to handle asynchronous code
+   - we need to subscribe to observables when we want to use it
+   - use this if the component needs to handle data changes without reloading 
+   - use this when component needs to be ractive to any changes within the component
+   - use this when template needs to refresh on its own
+   - observable is from third party library 'rxjs' and not part of Angular
+   - Even if the component is destroyed, observable used within component typescript file      will not destroy
+   - we need to explicitly destroy our own observables ( unsubscribe from observable) in ngOnDestry method  
+   - if we use observable from Angular libraries, ex- Angular routes, Angular does the unsubscription for us, but its always good practice to unsubscrive from observables
 - 'forms' to handle user inputs 
 - 'pipes' to transform the output to display on html
 -  http, to reach out to web server, or save data into database
