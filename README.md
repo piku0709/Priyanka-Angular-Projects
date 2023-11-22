@@ -68,6 +68,7 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - HostListener and HostBinding decorators can be used inside a directive for working with any DOM element. With HostListener, we can bind to any property of an element inside of a driective
    - with custom directives we can also create custom properties and use Input decorator or bind them. These custom properties can be used on a DOM element using the custom directive
 - Routing
+   - Angular matches paths by prefix
    - add Routes and RouterModule from @angular/router package
    - add RouterModule into imports array of app.module.ts file
    - use your applications routes array (type Routes) with RouterModule.forRoot() method
@@ -77,6 +78,7 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - routerink, queryParams and fragements can also be used with square brackets, ex -[routerLink], [queryParams], they can be used to pass route parameters or query params for a route, fragements can be used to pass value after hash (#) in the route
    - routerLink with square brackets accept an array value
    - queryParams with square brackets accept javascript object {allowEdit: '1'}
+   - pass queryParams value between several components using querParamsHandling value as 'preserve'
 - observables, angular uses this to handle asynchronous code
    - we need to subscribe to observables when we want to use it
    - use this if the component needs to handle data changes without reloading 
