@@ -79,6 +79,7 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - routerLink with square brackets accept an array value
    - queryParams with square brackets accept javascript object {allowEdit: '1'}
    - pass queryParams value between several components using querParamsHandling value as 'preserve'
+   - Guards are functionalities which execute before routes are loaded or vefore routes are left
 - observables, angular uses this to handle asynchronous code
    - we need to subscribe to observables when we want to use it
    - use this if the component needs to handle data changes without reloading 
