@@ -75,9 +75,10 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - angular has built-in directives routeLink to add your routes
    - built-in directive routerLinkActive can be used with link(li) html tag to add active style to active route
    - some of the router directives available are, routerLink, routerLinkActive,routerLinkActiveOptions, queryParams, fragment
-   - routerink, queryParams and fragements can also be used with square brackets, ex -[routerLink], [queryParams], they can be used to pass route parameters or query params for a route, fragements can be used to pass value after hash (#) in the route
+   - routerink, queryParams and fragements can also be used with square brackets, ex -[routerLink], [queryParams], they can be used to bind dynamic route parameters or query params for a route, fragments can be used to pass value after hash (#) in the route
    - routerLink with square brackets accept an array value
    - queryParams with square brackets accept javascript object {allowEdit: '1'}
+   - routerLinkActive directive with value 'active' (css class) can be used to show a currently selected link
    - pass queryParams value between several components using querParamsHandling value as 'preserve'
    - Guards are functionalities which execute before routes are loaded or vefore routes are left
 - observables, angular uses this to handle asynchronous code

@@ -10,7 +10,7 @@ export class RecipeService{
     private recipes: Recipe[] = [
         new Recipe(
             'Carrot halwa', 
-            'Sweet dish made out of carrots', 
+            'Sweet dish of carrots', 
             'https://upload.wikimedia.org/wikipedia/commons/0/0d/Indian_Recipes_Gajar_Ka_Halwa_A_Dessert_Recipe_from_Indian_Recipes_By_Sonia_Goyal.jpg',
             [
                 new Ingredient('Carrots', 5),
@@ -20,7 +20,7 @@ export class RecipeService{
             ]),
         new Recipe(
             'Kheer', 
-            'Sweet dish made out of tapioca pearl(sago/sabudana) and milk', 
+            'Sweet dish of tapioca pearl(sago/sabudana) and milk', 
             'https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/sabudana-kheer-recipe.jpg',
             [
                 new Ingredient('tapioca pearl', 100),
@@ -34,6 +34,10 @@ export class RecipeService{
 
     getRecipes(): Recipe[] {
         return this.recipes.slice() //returns a new array wich is copy of the array here, this way no changes can be done from outside
+    }
+
+    getRecipe(index: number): Recipe {
+        return this.recipes[index] 
     }
 
     addIngredientsToShoppingList(ingredients: Ingredient[] ) {
