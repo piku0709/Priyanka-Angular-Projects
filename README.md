@@ -101,7 +101,13 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - every observable has a pipe method, which can be used to format data received from observables
    - pipe can take unlimited aount of arguments or operators
    - operators are useful to change the format of data from observables, for ex - by calling a map operator from 'rxjs/operators' inside 'pipe' method
-- 'forms' to handle user inputs 
+   - Subject is also an object (special kind of observables) we can subscribe to, but its more active than observables, we can cal next()
+   - but when we create observables, we call next() from inside observables
+   - Subjects from 'rxjs' are better altrnatives than EventEmitters from '@angular/core'
+   - if you subscribe to EventEmitters, better use Subjects
+   - can use operators with Subjects, 
+   - should also unsubscribe to Subjects as well like observables
+- 'forms' to handle user inputs from outside
 - 'pipes' to transform the output to display on html
 -  http, to reach out to web server, or save data into database
 -  authentication in angular app
