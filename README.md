@@ -80,16 +80,27 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - queryParams with square brackets accept javascript object {allowEdit: '1'}
    - routerLinkActive directive with value 'active' (css class) can be used to show a currently selected link
    - pass queryParams value between several components using querParamsHandling value as 'preserve'
-   - Guards are functionalities which execute before routes are loaded or vefore routes are left
+   - Guards are functionalities which execute before routes are loaded or before routes are left
 - observables, angular uses this to handle asynchronous code
+   - observable are stream various data sources, events (user input), Http requests, Triggered in code
+   - observer is the code (which subscribes to the observables)
+      - 3 types of data packages are received and with three hooks 
+      - to handle data, handle error and handle completion
+   -  npm install --save rxjs@6
+   -  npm install --save rxjs-compat
    - we need to subscribe to observables when we want to use it
+   - we also need to unsubscribe from observables when we do not need it.
+   - angular features also have some built-in observables, ex - subscribing to params from angular route - we do not need to unsubscribe to angular observables, since angular does it for us
    - use this if the component needs to handle data changes without reloading 
    - use this when component needs to be ractive to any changes within the component
    - use this when template needs to refresh on its own
    - observable is from third party library 'rxjs' and not part of Angular
-   - Even if the component is destroyed, observable used within component typescript file      will not destroy
+   - Even if the component is destroyed, observable used within component typescript file will not destroy
    - we need to explicitly destroy our own observables ( unsubscribe from observable) in ngOnDestry method  
    - if we use observable from Angular libraries, ex- Angular routes, Angular does the unsubscription for us, but its always good practice to unsubscrive from observables
+   - every observable has a pipe method, which can be used to format data received from observables
+   - pipe can take unlimited aount of arguments or operators
+   - operators are useful to change the format of data from observables, for ex - by calling a map operator from 'rxjs/operators' inside 'pipe' method
 - 'forms' to handle user inputs 
 - 'pipes' to transform the output to display on html
 -  http, to reach out to web server, or save data into database
