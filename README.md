@@ -108,6 +108,14 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - can use operators with Subjects, 
    - should also unsubscribe to Subjects as well like observables
 - 'forms' to handle user inputs from outside
+   - template driven form , deined in HTML template only
+   - reactive form, defined programatically in typescript code as well as in html template and then tied together to get better control for fine-tuning the form
+   - we do not have form action/submit in the html template, instead angular should handle the form
+   - 'ngModel' attribute can be used in 3 ways with angular form elements
+      - can be used without any brackets around it i.e without any binding, where it is used to register the form-input to javascript representation of the form in typescript code. Sepciy the name of the input field using html attribute 'name'
+      - can be used just with square brackets for one-way binding or property binding  with form input elements to bind with a default value when needed
+      - can be used with square brackets and parenthesis for one-way binding, ex- to get the value as well as to see the value instantly on the UI
+   - ngModelgroup can be used to group form-controls, ex- grouping form-input fields in the javascript representaion of form field values, or to write a message on UI for the whole group if any data is not valid in the group
 - 'pipes' to transform the output to display on html
 -  http, to reach out to web server, or save data into database
 -  authentication in angular app
