@@ -38,8 +38,8 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
 - Angular projects are built from Components
 - DataBinding is how we output data in the DOM(html), or how data reacts to user events
 - ngModel is a directive to help with 2-way DataBinding
-- using services and depedency injection we achieve different pieces/componenets in the angular app communicate to each other, keeping code            centralized and manage the state of the application
-- routing helps us achieve manage different urls (from diff components), gives a feel of switchng between pages, although technically we remain on a   single page (index.html)
+- using services and dependency injection we achieve different pieces/componenets in the angular app communicate to each other, keeping code centralized and manage the state of the application
+- routing helps us achieve manage different urls (from diff components), gives a feel of switchng between pages, although technically we remain on a single page (index.html)
 - angular gets started with main.ts, there we bootstrap an angular application (AppModule), by passing the module as an argument and in this module we bootstrap AppComponent, angular analyses appComponet and learns about <app-root> selector and its able to use this selector in index.html
 - data flows from parent component to child component using @Input decorator and custom directives
 - data flows to parent component from child component using @Output decorator by raising an event to notify. To raise an event, an @Output() must have a type of EventEmitter, which is a class in @angular/core that you use to emit events
