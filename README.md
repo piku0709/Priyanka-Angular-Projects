@@ -117,6 +117,12 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
       - can be used with square brackets and parenthesis for one-way binding, ex- to get the value as well as to see the value instantly on the UI
    - ngModelgroup can be used to group form-controls, ex- grouping form-input fields in the javascript representaion of form field values, or to write a message on UI for the whole group if any data is not valid in the group
 - 'pipes' to transform the output to display on html
+   - pipes are feature built in Angular2 to transform some output in html template
+   - we can also build our own pipes
+   - they can be used both for synchronous or asynchronous data
+   - pipes can be used with parameters by using colon (:), ex {{ server.started | date: 'fullDate'}}, date is a built-in angular pipe
+   - multiple pipes can be applied together on data, but order is important, pipes are executed from left to right
+   - 'aync' is a built-in pipe with angular which helps us see the async data on html template after specified time in the promise returning that data
 -  http, to reach out to web server, or save data into database
 -  authentication in angular app
 -  optimization
