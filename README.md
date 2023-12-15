@@ -124,6 +124,18 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - multiple pipes can be applied together on data, but order is important, pipes are executed from left to right
    - 'aync' is a built-in pipe with angular which helps us see the async data on html template after specified time in the promise returning that data
 -  http, to reach out to web server, or save data into database
+   - need to add this module in app.module.ts imports array - HttpClientModule from @angular/common/http
+   - http requests are on;ly sent to backened when we subscribe to the http methods we use
+   - angular cannot connect to a databse directly, because its not safe, since its front end code and anubidy can look the code using developer tools
+   - interceptors:
+      - interceptors class/service neds to implement HttpInterceptor and implement intercept method
+      - this method will be executed before each request is sent to backened
+      - interceptors need to be declared in providers array usingg a json object in app.module.ts
+      - commonly used when we need to run a common functionality/logic before sending ech request, ex- sending authentication for each request
+      - we can also control the request execution in certain cases, ex- check request url and and add additionla auth or headers 
+      - HttpRequest object is immutable
+      - we can also make some changes to the received response in the interceptor
+      - every request's response is an observable and we can use pipe and map operators from 'rxjs' library to run a logic for each response 
 -  authentication in angular app
 -  optimization
 -  manage different modules
