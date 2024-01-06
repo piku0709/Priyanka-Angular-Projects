@@ -101,7 +101,7 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - every observable has a pipe method, which can be used to format data received from observables
    - pipe can take unlimited aount of arguments or operators
    - operators are useful to change the format of data from observables, for ex - by calling a map operator from 'rxjs/operators' inside 'pipe' method
-   - Subject is also an object (special kind of observables) we can subscribe to, but its more active than observables, we can cal next()
+   - Subject is also an object (special kind of observables) we can subscribe to, but its more active than observables, we can call next()
    - but when we create observables, we call next() from inside observables
    - Subjects from 'rxjs' are better altrnatives than EventEmitters from '@angular/core'
    - if you subscribe to EventEmitters, better use Subjects
@@ -113,7 +113,7 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - we do not have form action/submit in the html template, instead angular should handle the form
    - 'ngModel' attribute can be used in 3 ways with angular form elements
       - can be used without any brackets around it i.e without any binding, where it is used to register the form-input to javascript representation of the form in typescript code. Sepciy the name of the input field using html attribute 'name'
-      - can be used just with square brackets for one-way binding or property binding  with form input elements to bind with a default value when needed
+      - can be used just with square brackets for one-way binding or property binding with form input elements to bind with a default value when needed
       - can be used with square brackets and parenthesis for one-way binding, ex- to get the value as well as to see the value instantly on the UI
    - ngModelgroup can be used to group form-controls, ex- grouping form-input fields in the javascript representaion of form field values, or to write a message on UI for the whole group if any data is not valid in the group
 - 'pipes' to transform the output to display on html
@@ -122,11 +122,11 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - they can be used both for synchronous or asynchronous data
    - pipes can be used with parameters by using colon (:), ex {{ server.started | date: 'fullDate'}}, date is a built-in angular pipe
    - multiple pipes can be applied together on data, but order is important, pipes are executed from left to right
-   - 'aync' is a built-in pipe with angular which helps us see the async data on html template after specified time in the promise returning that data
+   - 'async' is a built-in pipe with angular which helps us see the async data on html template after specified time in the promise returning that data
 -  http, to reach out to web server, or save data into database
    - need to add this module in app.module.ts imports array - HttpClientModule from @angular/common/http
-   - http requests are on;ly sent to backened when we subscribe to the http methods we use
-   - angular cannot connect to a databse directly, because its not safe, since its front end code and anubidy can look the code using developer tools
+   - http requests are only sent to backened when we subscribe to the http methods we use
+   - angular cannot connect to a databse directly, because its not safe, since its front end code and any body can look the code using developer tools
    - interceptors:
       - interceptors class/service neds to implement HttpInterceptor and implement intercept method
       - this method will be executed before each request is sent to backened
