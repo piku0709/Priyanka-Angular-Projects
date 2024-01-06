@@ -132,11 +132,18 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
       - this method will be executed before each request is sent to backened
       - interceptors need to be declared in providers array usingg a json object in app.module.ts
       - commonly used when we need to run a common functionality/logic before sending ech request, ex- sending authentication for each request
-      - we can also control the request execution in certain cases, ex- check request url and and add additionla auth or headers 
+      - we can also control the request execution in certain cases, ex- check request url and and add additional auth or headers 
       - HttpRequest object is immutable
       - we can also make some changes to the received response in the interceptor
       - every request's response is an observable and we can use pipe and map operators from 'rxjs' library to run a logic for each response 
 -  authentication in angular app
+   - we can use suth guards to guard any route and add the guard in the route in ruting module file
+   - authenticatio token can be stored in localStorage and have it persistent until user is            authenticated 
+- dynamic components
+ - loaded programmitically, 
+   - using *ngIf which controls whether component should be added to DOM
+   - Dynamic Component Loader, component created and added via code, no need to touch template
+
 -  optimization
 -  manage different modules
 
