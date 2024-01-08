@@ -143,7 +143,12 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
  - loaded programmitically, 
    - using *ngIf which controls whether component should be added to DOM
    - Dynamic Component Loader, component created and added via code, no need to touch template
-
+- Angular Modules
+   - Angular analyzes NgModules to "understand" your application and its features
+   - Angular modules define all building blocks your app uses: Component, Directives, Services
+   - An app requires at least one module (AppModule) but may be split inot multiple modules
+   - Core Angular features are included in Angular modules (e.g. FormsModule) to load them only when needed
+   - you cannot use a feature/building block without inlcuding it in a module
 -  optimization
 -  manage different modules
 
