@@ -148,7 +148,8 @@ Angular is a Javascript Framework which allows you to create reactive Single-Pag
    - Angular modules define all building blocks your app uses: Component, Directives, Services
    - An app requires at least one module (AppModule) but may be split inot multiple modules
    - Core Angular features are included in Angular modules (e.g. FormsModule) to load them only when needed
-   - you cannot use a feature/building block without inlcuding it in a module
+   - you cannot use a feature/building block without including it in a module
+   - only declare things once and use them by imports and exports, multiple declarations of same thing is not allowed
 -  optimization
 -  manage different modules
 
