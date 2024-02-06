@@ -4,6 +4,7 @@ import { catchError, tap } from "rxjs/operators";
 import { BehaviorSubject, Subject, throwError } from "rxjs";
 import { User } from "./user.model";
 import { Router } from "@angular/router";
+import { environment } from "../../environments/environment"
 
 export interface AuthResponseData {
     idToken: string;
@@ -21,7 +22,7 @@ export class AuthService {
     private tokenExpirationTimer: any;
 
     constructor(private http: HttpClient, private router: Router){}
-    private API_KEY = 'AIzaSyCRErsNiXj0lNzR4hd2oG39X4ptIDhYAQE';
+    private API_KEY = environment.firebaseAPIKey;
 
     signup(email: string, password: string) {
         return this.http.post<AuthResponseData>(

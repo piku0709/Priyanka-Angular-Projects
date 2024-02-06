@@ -29,4 +29,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # project specific steps
 - ng new recipe-book --no-strict
 - npm install --save bootstrap@3
-- 
+
+# project deployment steps
+- ng build
+- npm install -g firebase-tools
+- firebase login (used google account to register into firebase)
+- firebase init
+- firebase deploy
+- Hosting url for recipe-book: https://ng-recipe-book-c43a9.web.app
+- used firbase to also handle backened features- authentication and saving recipe data
